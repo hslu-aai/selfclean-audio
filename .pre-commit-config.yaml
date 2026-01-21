@@ -1,0 +1,35 @@
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.5.0
+      hooks:
+          - id: trailing-whitespace
+            exclude: ^docs/_api/
+          - id: end-of-file-fixer
+            exclude: ^docs/_api/
+          - id: debug-statements
+          - id: check-added-large-files
+          - id: check-yaml
+          - id: check-merge-conflict
+          - id: mixed-line-ending
+            args: ["--fix=lf"]
+
+    - repo: https://github.com/adrienverge/yamllint.git
+      rev: v1.35.1
+      hooks:
+          - id: yamllint
+            args: ["-c=.yamllint"]
+
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: v0.6.9
+      hooks:
+          # Run the linter
+          - id: ruff
+            args: [--fix, --exit-zero]
+          # Run the formatter
+          - id: ruff-format
+
+    - repo: https://github.com/RobertCraigie/pyright-python
+      rev: v1.1.387
+      hooks:
+          - id: pyright
+            args: [src, tests]

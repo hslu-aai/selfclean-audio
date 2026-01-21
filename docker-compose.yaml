@@ -1,0 +1,48 @@
+services:
+    db:
+        image: postgres:15
+        container_name: selfclean-audio-db
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: dejavu
+        ports:
+            - "5432:5432"
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U postgres -d dejavu"]
+            interval: 5s
+            timeout: 3s
+            retries: 10
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+
+    app:
+        build: .
+        image: selfclean-audio:latest
+        container_name: selfclean-audio
+        shm_size: "32g"
+        ports:
+            - "8888:8888"
+        volumes:
+            - ./:/workspace
+            - ./outputs:/workspace/outputs
+            - ./data:/workspace/data
+        working_dir: /workspace
+        depends_on:
+            db:
+                condition: service_healthy
+        environment:
+            - PYTHONUNBUFFERED=1
+        command: tail -f /dev/null
+        tty: true
+        stdin_open: true
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
+
+volumes:
+    pgdata:
