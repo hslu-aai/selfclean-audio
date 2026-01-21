@@ -1,0 +1,953 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selfclean_audio.config &#8212; selfclean-audio 0.1.dev1+g706b51983.d20260121 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=691ac1f6"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=30646c52"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/selfclean_audio/config';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hslu-aai.github.io/selfclean-audio/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../_static/dls-logo.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="dev" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/dls-logo.svg" class="logo__image only-light" alt=""/>
+    <img src="../../_static/dls-logo.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">selfclean-audio</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../how-to.html">
+    How-to Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../explanations.html">
+    Explanations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hslu-aai/selfclean-audio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/selfclean-audio" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-cube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../how-to.html">
+    How-to Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../explanations.html">
+    Explanations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hslu-aai/selfclean-audio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/selfclean-audio" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-cube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">selfclean_audio.config</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for selfclean_audio.config</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (c) Lucerne University of Applied Sciences and Arts.</span>
+<span class="c1"># All rights reserved.</span>
+
+<span class="c1"># This source code is licensed under the license found in the</span>
+<span class="c1"># LICENSE file in the root directory of this source tree.</span>
+
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">builtins</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib.machinery</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib.util</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">hydra.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">instantiate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">omegaconf</span><span class="w"> </span><span class="kn">import</span> <span class="n">DictConfig</span><span class="p">,</span> <span class="n">ListConfig</span><span class="p">,</span> <span class="n">OmegaConf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataLoader</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.constants</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">DEFAULT_SAMPLE_RATE</span><span class="p">,</span>
+    <span class="n">DEFAULT_TARGET_DURATION_SEC</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.validation</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">get_seed_from_config</span><span class="p">,</span>
+    <span class="n">validate_duplicate_strategy</span><span class="p">,</span>
+    <span class="n">validate_full_config</span><span class="p">,</span>
+    <span class="n">validate_gtzan_config</span><span class="p">,</span>
+    <span class="n">validate_off_topic_strategy</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;callable_to_str&quot;</span><span class="p">,</span> <span class="s2">&quot;LazyCall&quot;</span><span class="p">,</span> <span class="s2">&quot;LazyConfig&quot;</span><span class="p">,</span> <span class="s2">&quot;LazyFactory&quot;</span><span class="p">,</span> <span class="s2">&quot;TemplateType&quot;</span><span class="p">]</span>
+<span class="n">_CFG_PACKAGE_NAME</span> <span class="o">=</span> <span class="s2">&quot;selfclean_audio._cfg_loader&quot;</span>
+
+
+<div class="viewcode-block" id="TemplateType">
+<a class="viewcode-back" href="../../_api/selfclean_audio.config.html#selfclean_audio.config.TemplateType">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TemplateType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Enum for different experiment template types.&quot;&quot;&quot;</span>
+
+    <span class="n">DUPLICATES</span> <span class="o">=</span> <span class="s2">&quot;duplicates&quot;</span>
+    <span class="n">LABEL_ERRORS</span> <span class="o">=</span> <span class="s2">&quot;label_errors&quot;</span>
+    <span class="n">OFF_TOPIC</span> <span class="o">=</span> <span class="s2">&quot;off_topic&quot;</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_detect_template_type</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TemplateType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Detect the template type from config parameters.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cfg: Configuration object</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        TemplateType: The detected template type</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">issue_type</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;ISSUE_TYPE&quot;</span><span class="p">,</span> <span class="s2">&quot;duplicates&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Check for duplicates (any type)</span>
+    <span class="k">if</span> <span class="s2">&quot;duplicates&quot;</span> <span class="ow">in</span> <span class="n">issue_type</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TemplateType</span><span class="o">.</span><span class="n">DUPLICATES</span>
+
+    <span class="c1"># Check for label errors</span>
+    <span class="k">if</span> <span class="s2">&quot;label_errors&quot;</span> <span class="ow">in</span> <span class="n">issue_type</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TemplateType</span><span class="o">.</span><span class="n">LABEL_ERRORS</span>
+
+    <span class="c1"># Check for off-topic</span>
+    <span class="k">if</span> <span class="s2">&quot;off_topic&quot;</span> <span class="ow">in</span> <span class="n">issue_type</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TemplateType</span><span class="o">.</span><span class="n">OFF_TOPIC</span>
+
+    <span class="k">return</span> <span class="n">TemplateType</span><span class="o">.</span><span class="n">DUPLICATES</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_patch_import</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Enhance relative import statements in config files, so that they:</span>
+<span class="sd">    1. locate files purely based on relative location, regardless of packages.</span>
+<span class="sd">       e.g. you can import file without having __init__</span>
+<span class="sd">    2. do not cache modules globally; modifications of module states has no side effect</span>
+<span class="sd">    3. imported dict are turned into omegaconf.DictConfig automatically</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">old_import</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">__import__</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">find_relative_file</span><span class="p">(</span><span class="n">original_file</span><span class="p">,</span> <span class="n">relative_import_path</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+        <span class="n">cur_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">original_file</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">level</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">cur_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">cur_file</span><span class="p">)</span>
+        <span class="n">cur_name</span> <span class="o">=</span> <span class="n">relative_import_path</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">cur_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+            <span class="n">cur_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cur_file</span><span class="p">,</span> <span class="n">part</span><span class="p">)</span>
+        <span class="c1"># NOTE: directory import is not handled. Because then it&#39;s unclear</span>
+        <span class="c1"># if such import should produce python module or DictConfig. This can</span>
+        <span class="c1"># be discussed further if needed.</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cur_file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">):</span>
+            <span class="n">cur_file</span> <span class="o">+=</span> <span class="s2">&quot;.py&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">cur_file</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Cannot import name </span><span class="si">{</span><span class="n">relative_import_path</span><span class="si">}</span><span class="s2"> from &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">original_file</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">cur_file</span><span class="si">}</span><span class="s2"> has to exist.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">cur_file</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">new_import</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">globals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">locals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fromlist</span><span class="o">=</span><span class="p">(),</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="c1"># Only deal with relative imports inside config files</span>
+            <span class="n">level</span> <span class="o">!=</span> <span class="mi">0</span>
+            <span class="ow">and</span> <span class="nb">globals</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="p">(</span><span class="nb">globals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;__package__&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">_CFG_PACKAGE_NAME</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="n">cur_file</span> <span class="o">=</span> <span class="n">find_relative_file</span><span class="p">(</span><span class="nb">globals</span><span class="p">[</span><span class="s2">&quot;__file__&quot;</span><span class="p">],</span> <span class="n">name</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+            <span class="n">spec</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">machinery</span><span class="o">.</span><span class="n">ModuleSpec</span><span class="p">(</span>
+                <span class="n">_CFG_PACKAGE_NAME</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">cur_file</span><span class="p">),</span>
+                <span class="kc">None</span><span class="p">,</span>
+                <span class="n">origin</span><span class="o">=</span><span class="n">cur_file</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">module_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+            <span class="n">module</span><span class="o">.</span><span class="vm">__file__</span> <span class="o">=</span> <span class="n">cur_file</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cur_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="n">exec</span><span class="p">(</span><span class="nb">compile</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">cur_file</span><span class="p">,</span> <span class="s2">&quot;exec&quot;</span><span class="p">),</span> <span class="n">module</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">fromlist</span><span class="p">:</span>  <span class="c1"># turn imported dict into DictConfig automatically</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="n">DictConfig</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">flags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;allow_objects&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                <span class="n">module</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+            <span class="k">return</span> <span class="n">module</span>
+        <span class="k">return</span> <span class="n">old_import</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">globals</span><span class="p">,</span> <span class="nb">locals</span><span class="p">,</span> <span class="n">fromlist</span><span class="o">=</span><span class="n">fromlist</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">)</span>
+
+    <span class="n">builtins</span><span class="o">.</span><span class="n">__import__</span> <span class="o">=</span> <span class="n">new_import</span>
+    <span class="k">yield</span> <span class="n">new_import</span>
+    <span class="n">builtins</span><span class="o">.</span><span class="n">__import__</span> <span class="o">=</span> <span class="n">old_import</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">callable_to_str</span><span class="p">(</span><span class="n">some_callable</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="c1"># Return module and name of a callable (function or class) for OmegaConf.</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">some_callable</span><span class="o">.</span><span class="vm">__module__</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">some_callable</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<div class="viewcode-block" id="LazyCall">
+<a class="viewcode-back" href="../../_api/selfclean_audio.config.html#selfclean_audio.config.LazyCall">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LazyCall</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wrap a callable so that when it&#39;s called, the call will not be executed, but</span>
+<span class="sd">    returns a dict that describes the call. Only supports keyword arguments.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Callable</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">target</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">target_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Pop `_target_` if it already exists in kwargs. This happens when the</span>
+        <span class="c1"># callable target is changed while keeping everything else same.</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;_target_&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="c1"># Put current target first; it reads better in printed/saved output.</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="n">callable_to_str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">T</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">}</span>
+        <span class="k">return</span> <span class="n">DictConfig</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;allow_objects&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="LazyConfig">
+<a class="viewcode-back" href="../../_api/selfclean_audio.config.html#selfclean_audio.config.LazyConfig">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LazyConfig</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Provide methods to save, load, and overrides an omegaconf config object</span>
+<span class="sd">    which may contain definition of lazily-constructed objects.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="LazyConfig.load">
+<a class="viewcode-back" href="../../_api/selfclean_audio.config.html#selfclean_audio.config.LazyConfig.load">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DictConfig</span> <span class="o">|</span> <span class="n">ListConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load a config file (either Python or YAML).</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            filename: absolute path or relative path w.r.t. current directory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;/./&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;.py&quot;</span><span class="p">,</span> <span class="s2">&quot;.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;.yml&quot;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Config file </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2"> has to be a python or yaml file.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">):</span>
+            <span class="k">with</span> <span class="n">_patch_import</span><span class="p">():</span>
+                <span class="c1"># Record the filename</span>
+                <span class="n">module_namespace</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;__file__&quot;</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span>
+                    <span class="s2">&quot;__package__&quot;</span><span class="p">:</span> <span class="n">_CFG_PACKAGE_NAME</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span>
+                <span class="p">}</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="c1"># Compile first with filename to make filename appear in stacktrace</span>
+                <span class="n">exec</span><span class="p">(</span><span class="nb">compile</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;exec&quot;</span><span class="p">),</span> <span class="n">module_namespace</span><span class="p">)</span>
+
+            <span class="c1"># Collect final objects in config:</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">flags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;allow_objects&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+            <span class="c1"># Store config path for template detection</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">_config_path</span> <span class="o">=</span> <span class="n">filename</span>
+
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">module_namespace</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="c1"># Ignore &quot;private&quot; variables (starting with underscores).</span>
+                <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
+                    <span class="k">continue</span>
+
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="n">DictConfig</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">)):</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">DictConfig</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;allow_objects&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                    <span class="n">ret</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="n">ListConfig</span> <span class="o">|</span> <span class="nb">list</span><span class="p">)):</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="n">ListConfig</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;allow_objects&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                    <span class="n">ret</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">)):</span>
+                    <span class="c1"># Also save simple scalar values</span>
+                    <span class="n">ret</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">obj</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">unsafe_load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;allow_objects&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+            <span class="c1"># Store config path for template detection</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">_config_path</span> <span class="o">=</span> <span class="n">filename</span>
+
+        <span class="k">return</span> <span class="n">ret</span></div>
+
+
+<div class="viewcode-block" id="LazyConfig.save">
+<a class="viewcode-back" href="../../_api/selfclean_audio.config.html#selfclean_audio.config.LazyConfig.save">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Save a config object as YAML file. (same as :meth:`OmegaConf.save`).&quot;&quot;&quot;</span>
+        <span class="n">OmegaConf</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">resolve</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LazyConfig.apply_overrides">
+<a class="viewcode-back" href="../../_api/selfclean_audio.config.html#selfclean_audio.config.LazyConfig.apply_overrides">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_overrides</span><span class="p">(</span>
+        <span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">,</span> <span class="n">overrides</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DictConfig</span> <span class="o">|</span> <span class="n">ListConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a new config by applying overrides (provided as dotlist). See</span>
+<span class="sd">        https://hydra.cc/docs/advanced/override_grammar/basic/ for dotlist syntax.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Preserve _config_path during merge</span>
+        <span class="n">config_path</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;_config_path&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">from_dotlist</span><span class="p">(</span><span class="n">overrides</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">config_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">_config_path</span> <span class="o">=</span> <span class="n">config_path</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="LazyFactory">
+<a class="viewcode-back" href="../../_api/selfclean_audio.config.html#selfclean_audio.config.LazyFactory">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LazyFactory</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Provides a clean interface to easily construct essential objects from input</span>
+<span class="sd">    lazy configs (omegaconf): dataloader, model.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build_selfclean_audio</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">):</span>
+        <span class="c1"># For special evaluation datasets (like CSEM), do not override issues_to_detect.</span>
+        <span class="c1"># Allow SelfCleanAudio default to include all three issue types when None.</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.cleaner.issue_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">IssueTypes</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
+            <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;EVAL_DATASET&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">str</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">EVAL_DATASET</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;csem&quot;</span>
+        <span class="p">):</span>
+            <span class="n">template_type</span> <span class="o">=</span> <span class="n">_detect_template_type</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+
+            <span class="c1"># Map template types to issue types</span>
+            <span class="n">issue_mapping</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">TemplateType</span><span class="o">.</span><span class="n">DUPLICATES</span><span class="p">:</span> <span class="p">[</span><span class="n">IssueTypes</span><span class="o">.</span><span class="n">NEAR_DUPLICATES</span><span class="p">],</span>
+                <span class="n">TemplateType</span><span class="o">.</span><span class="n">LABEL_ERRORS</span><span class="p">:</span> <span class="p">[</span><span class="n">IssueTypes</span><span class="o">.</span><span class="n">LABEL_ERRORS</span><span class="p">],</span>
+                <span class="n">TemplateType</span><span class="o">.</span><span class="n">OFF_TOPIC</span><span class="p">:</span> <span class="p">[</span><span class="n">IssueTypes</span><span class="o">.</span><span class="n">OFF_TOPIC_SAMPLES</span><span class="p">],</span>
+            <span class="p">}</span>
+
+            <span class="n">cfg</span><span class="o">.</span><span class="n">selfclean_audio</span><span class="o">.</span><span class="n">issues_to_detect</span> <span class="o">=</span> <span class="n">issue_mapping</span><span class="p">[</span><span class="n">template_type</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">instantiate</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">selfclean_audio</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build_dataloader</span><span class="p">(</span><span class="n">cfg</span><span class="p">:</span> <span class="n">DictConfig</span><span class="p">):</span>
+        <span class="c1"># Special-case: evaluation on CSEM Membrane Pumps</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;EVAL_DATASET&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">str</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">EVAL_DATASET</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;csem&quot;</span><span class="p">:</span>
+            <span class="c1"># Expect CSEM_ROOT and dataloader params</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;CSEM_ROOT&quot;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Config must define CSEM_ROOT for CSEM dataset&quot;</span><span class="p">)</span>
+
+            <span class="n">dataset_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="s2">&quot;selfclean_audio.datasets.csem.CSEMMembranePumps&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;root&quot;</span><span class="p">:</span> <span class="n">cfg</span><span class="o">.</span><span class="n">CSEM_ROOT</span><span class="p">,</span>
+                    <span class="s2">&quot;convert_mono&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">&quot;sample_rate&quot;</span><span class="p">:</span> <span class="n">DEFAULT_SAMPLE_RATE</span><span class="p">,</span>
+                    <span class="s2">&quot;target_duration_sec&quot;</span><span class="p">:</span> <span class="n">DEFAULT_TARGET_DURATION_SEC</span><span class="p">,</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+
+            <span class="n">dataset</span> <span class="o">=</span> <span class="n">instantiate</span><span class="p">(</span><span class="n">dataset_cfg</span><span class="p">)</span>
+
+            <span class="c1"># Validate dataloader config</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;dataloader&quot;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Config must define dataloader parameters&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;num_workers&quot;</span><span class="p">,</span> <span class="s2">&quot;batch_size&quot;</span><span class="p">,</span> <span class="s2">&quot;drop_last&quot;</span><span class="p">,</span> <span class="s2">&quot;pin_memory&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Config dataloader must define </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">DataLoader</span><span class="p">(</span>
+                <span class="n">dataset</span><span class="p">,</span>
+                <span class="n">num_workers</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">num_workers</span><span class="p">,</span>
+                <span class="n">batch_size</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">batch_size</span><span class="p">,</span>
+                <span class="n">drop_last</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">drop_last</span><span class="p">,</span>
+                <span class="n">pin_memory</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">pin_memory</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Special-case: evaluation on GTZAN with known issues</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;EVAL_DATASET&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">str</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">EVAL_DATASET</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;gtzan&quot;</span><span class="p">:</span>
+            <span class="n">validate_gtzan_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+
+            <span class="c1"># Optional ground-truth files (duplicates and prep with mislabels)</span>
+            <span class="n">gt_file</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;GTZAN_GT_FILE&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">gt_prep</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;GTZAN_PREP_FILE&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+            <span class="c1"># Build GTZAN dataset</span>
+            <span class="n">dataset_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="s2">&quot;selfclean_audio.datasets.gtzan.GTZANKnownIssuesDataset&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;root&quot;</span><span class="p">:</span> <span class="n">cfg</span><span class="o">.</span><span class="n">GTZAN_ROOT</span><span class="p">,</span>
+                    <span class="s2">&quot;issue_type&quot;</span><span class="p">:</span> <span class="n">cfg</span><span class="o">.</span><span class="n">ISSUE_TYPE</span><span class="p">,</span>
+                    <span class="s2">&quot;gt_duplicates_file&quot;</span><span class="p">:</span> <span class="n">gt_file</span><span class="p">,</span>
+                    <span class="s2">&quot;gt_prep_file&quot;</span><span class="p">:</span> <span class="n">gt_prep</span><span class="p">,</span>
+                    <span class="s2">&quot;convert_mono&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">&quot;sample_rate&quot;</span><span class="p">:</span> <span class="n">DEFAULT_SAMPLE_RATE</span><span class="p">,</span>
+                    <span class="s2">&quot;target_duration_sec&quot;</span><span class="p">:</span> <span class="n">DEFAULT_TARGET_DURATION_SEC</span><span class="p">,</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+
+            <span class="n">dataset</span> <span class="o">=</span> <span class="n">instantiate</span><span class="p">(</span><span class="n">dataset_cfg</span><span class="p">)</span>
+
+            <span class="c1"># Validate dataloader config</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="s2">&quot;dataloader&quot;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Config must define dataloader parameters&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;num_workers&quot;</span><span class="p">,</span> <span class="s2">&quot;batch_size&quot;</span><span class="p">,</span> <span class="s2">&quot;drop_last&quot;</span><span class="p">,</span> <span class="s2">&quot;pin_memory&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Config dataloader must define </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">DataLoader</span><span class="p">(</span>
+                <span class="n">dataset</span><span class="p">,</span>
+                <span class="n">num_workers</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">num_workers</span><span class="p">,</span>
+                <span class="n">batch_size</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">batch_size</span><span class="p">,</span>
+                <span class="n">drop_last</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">drop_last</span><span class="p">,</span>
+                <span class="n">pin_memory</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">pin_memory</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Comprehensive validation</span>
+        <span class="n">validate_full_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+
+        <span class="c1"># Get seed from config</span>
+        <span class="n">seed</span> <span class="o">=</span> <span class="n">get_seed_from_config</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+
+        <span class="n">esc50_root</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">ESC50_ROOT</span>
+        <span class="n">esc50_meta</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">ESC50_META</span>
+        <span class="n">noise_root</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">NOISE_ROOT</span>
+
+        <span class="n">issue_type</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">ISSUE_TYPE</span>
+        <span class="n">frac_error</span> <span class="o">=</span> <span class="n">cfg</span><span class="o">.</span><span class="n">FRAC_ERROR</span>
+
+        <span class="c1"># Base dataset configuration (ESC50)</span>
+        <span class="n">base_dataset_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="s2">&quot;selfclean_audio.datasets.esc50.ESC50&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;root&quot;</span><span class="p">:</span> <span class="n">esc50_root</span><span class="p">,</span>
+                <span class="s2">&quot;dataframe&quot;</span><span class="p">:</span> <span class="n">esc50_meta</span><span class="p">,</span>
+                <span class="s2">&quot;convert_mono&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;resample&quot;</span><span class="p">:</span> <span class="n">DEFAULT_SAMPLE_RATE</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Build appropriate dataset config based on issue type</span>
+        <span class="k">if</span> <span class="s2">&quot;duplicates&quot;</span> <span class="ow">in</span> <span class="n">issue_type</span><span class="p">:</span>
+            <span class="n">duplicate_strategy</span> <span class="o">=</span> <span class="n">validate_duplicate_strategy</span><span class="p">(</span><span class="n">issue_type</span><span class="p">)</span>
+
+            <span class="n">dataset_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="s2">&quot;selfclean_audio.datasets.duplicate_dataset.DuplicateDataset&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="n">base_dataset_cfg</span><span class="p">,</span>
+                    <span class="s2">&quot;frac_error&quot;</span><span class="p">:</span> <span class="n">frac_error</span><span class="p">,</span>
+                    <span class="s2">&quot;duplicate_strategy&quot;</span><span class="p">:</span> <span class="n">duplicate_strategy</span><span class="p">,</span>
+                    <span class="s2">&quot;noise_level&quot;</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">,</span>
+                    <span class="s2">&quot;crop_ratio_range&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">],</span>
+                    <span class="s2">&quot;random_state&quot;</span><span class="p">:</span> <span class="n">seed</span><span class="p">,</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;DuplicateDataset_</span><span class="si">{</span><span class="n">issue_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;save_to_temp&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">issue_type</span> <span class="o">==</span> <span class="s2">&quot;label_errors&quot;</span><span class="p">:</span>
+            <span class="n">dataset_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="s2">&quot;selfclean_audio.datasets.label_error_dataset.LabelErrorDataset&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="n">base_dataset_cfg</span><span class="p">,</span>
+                    <span class="s2">&quot;frac_error&quot;</span><span class="p">:</span> <span class="n">frac_error</span><span class="p">,</span>
+                    <span class="s2">&quot;change_for_every_label&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                    <span class="s2">&quot;random_state&quot;</span><span class="p">:</span> <span class="n">seed</span><span class="p">,</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;LabelErrorDataset&quot;</span><span class="p">,</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="s2">&quot;off_topic&quot;</span> <span class="ow">in</span> <span class="n">issue_type</span><span class="p">:</span>
+            <span class="n">contamination_strategy</span> <span class="o">=</span> <span class="n">validate_off_topic_strategy</span><span class="p">(</span><span class="n">issue_type</span><span class="p">)</span>
+
+            <span class="c1"># External contamination dataset for off_topic_external and off_topic_combined</span>
+            <span class="n">contamination_dataset_cfg</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">issue_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;off_topic_external&quot;</span><span class="p">,</span> <span class="s2">&quot;off_topic_combined&quot;</span><span class="p">]:</span>
+                <span class="n">contamination_dataset_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="s2">&quot;selfclean_audio.datasets.folder.FolderAudioDataset&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;root&quot;</span><span class="p">:</span> <span class="n">noise_root</span><span class="p">,</span>
+                        <span class="s2">&quot;convert_mono&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="s2">&quot;sample_rate&quot;</span><span class="p">:</span> <span class="n">DEFAULT_SAMPLE_RATE</span><span class="p">,</span>
+                    <span class="p">}</span>
+                <span class="p">)</span>
+
+            <span class="n">dataset_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;_target_&quot;</span><span class="p">:</span> <span class="s2">&quot;selfclean_audio.datasets.off_topic_dataset.OffTopicDataset&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="n">base_dataset_cfg</span><span class="p">,</span>
+                    <span class="s2">&quot;contamination_dataset&quot;</span><span class="p">:</span> <span class="n">contamination_dataset_cfg</span><span class="p">,</span>
+                    <span class="s2">&quot;frac_error&quot;</span><span class="p">:</span> <span class="n">frac_error</span><span class="p">,</span>
+                    <span class="s2">&quot;contamination_strategy&quot;</span><span class="p">:</span> <span class="n">contamination_strategy</span><span class="p">,</span>
+                    <span class="s2">&quot;noise_level&quot;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>
+                    <span class="s2">&quot;random_state&quot;</span><span class="p">:</span> <span class="n">seed</span><span class="p">,</span>
+                    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;OffTopicDataset_</span><span class="si">{</span><span class="n">issue_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">validate_issue_type</span>
+
+            <span class="n">validate_issue_type</span><span class="p">(</span>
+                <span class="n">issue_type</span>
+            <span class="p">)</span>  <span class="c1"># This will raise ValidationError with proper message</span>
+
+        <span class="n">dataset</span> <span class="o">=</span> <span class="n">instantiate</span><span class="p">(</span><span class="n">dataset_cfg</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">DataLoader</span><span class="p">(</span>
+            <span class="n">dataset</span><span class="p">,</span>
+            <span class="n">num_workers</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">num_workers</span><span class="p">,</span>
+            <span class="n">batch_size</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">batch_size</span><span class="p">,</span>
+            <span class="n">drop_last</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">drop_last</span><span class="p">,</span>
+            <span class="n">pin_memory</span><span class="o">=</span><span class="n">cfg</span><span class="o">.</span><span class="n">dataloader</span><span class="o">.</span><span class="n">pin_memory</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

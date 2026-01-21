@@ -1,0 +1,1309 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selfclean_audio.selfclean_audio &#8212; selfclean-audio 0.1.dev1+g706b51983.d20260121 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=691ac1f6"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=30646c52"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/selfclean_audio/selfclean_audio';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hslu-aai.github.io/selfclean-audio/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="icon" href="../../_static/dls-logo.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="dev" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/dls-logo.svg" class="logo__image only-light" alt=""/>
+    <img src="../../_static/dls-logo.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">selfclean-audio</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../how-to.html">
+    How-to Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../explanations.html">
+    Explanations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hslu-aai/selfclean-audio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/selfclean-audio" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-cube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../how-to.html">
+    How-to Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../explanations.html">
+    Explanations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hslu-aai/selfclean-audio" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/selfclean-audio" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-cube fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">selfclean_audio.selfclean_audio</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for selfclean_audio.selfclean_audio</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (c) Lucerne University of Applied Sciences and Arts.</span>
+<span class="c1"># All rights reserved.</span>
+
+<span class="c1"># This source code is licensed under the license found in the</span>
+<span class="c1"># LICENSE file in the root directory of this source tree.</span>
+
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sized</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Union</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">loguru</span><span class="w"> </span><span class="kn">import</span> <span class="n">logger</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">selfclean_audio.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">FolderAudioDataset</span><span class="p">,</span> <span class="n">NoisyDataset</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">selfclean_audio.ssl_adapt</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoraAdaptConfig</span><span class="p">,</span> <span class="n">adapt_model_with_lora</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.constants</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">DEFAULT_FIGURE_SIZE</span><span class="p">,</span>
+    <span class="n">DEFAULT_HISTOGRAM_ALPHA</span><span class="p">,</span>
+    <span class="n">DEFAULT_HISTOGRAM_BINS</span><span class="p">,</span>
+    <span class="n">DEFAULT_TSNE_PERPLEXITY_MAX</span><span class="p">,</span>
+    <span class="n">DEFAULT_TSNE_PERPLEXITY_MIN</span><span class="p">,</span>
+    <span class="n">TEMPORAL_FEATURE_NAMES</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ARR_TYPE</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">memmap</span><span class="p">]</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;PretrainingSSL&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SelfCleanAudio&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;create_memmap&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;create_memmap_path&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;embed_dataset&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;extract_temporal_stats_batch&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="PretrainingSSL">
+<a class="viewcode-back" href="../../_api/selfclean_audio.selfclean_audio.html#selfclean_audio.selfclean_audio.PretrainingSSL">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PretrainingSSL</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Enum of supported self-supervised learning pretraining models.&quot;&quot;&quot;</span>
+
+    <span class="n">EAT_BASE_PRETRAIN</span> <span class="o">=</span> <span class="s2">&quot;eat-base_pretrain&quot;</span>
+    <span class="n">EAT_BASE_FINETUNE</span> <span class="o">=</span> <span class="s2">&quot;eat-base_finetune&quot;</span>
+    <span class="n">EAT_LARGE_PRETRAIN</span> <span class="o">=</span> <span class="s2">&quot;eat-large_pretrain&quot;</span>
+    <span class="n">EAT_LARGE_FINETUNE</span> <span class="o">=</span> <span class="s2">&quot;eat-large_finetune&quot;</span>
+    <span class="n">BEATS</span> <span class="o">=</span> <span class="s2">&quot;beats&quot;</span>
+    <span class="n">CAVMAE</span> <span class="o">=</span> <span class="s2">&quot;cav-mae&quot;</span>
+    <span class="n">M2D</span> <span class="o">=</span> <span class="s2">&quot;m2d&quot;</span>
+    <span class="n">CLMR</span> <span class="o">=</span> <span class="s2">&quot;clmr&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="SelfCleanAudio">
+<a class="viewcode-back" href="../../_api/selfclean_audio.selfclean_audio.html#selfclean_audio.selfclean_audio.SelfCleanAudio">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SelfCleanAudio</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main class to clean audio datasets using pretrained SSL models and</span>
+<span class="sd">    distance-based cleaner.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">distance_function_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;sklearn.metrics.pairwise.&quot;</span><span class="p">,</span>
+        <span class="n">distance_function_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;cosine_similarity&quot;</span><span class="p">,</span>
+        <span class="n">chunk_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">precision_type_distance</span><span class="p">:</span> <span class="nb">type</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+        <span class="n">memmap</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">memmap_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">plot_distribution</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">plot_top_N</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">output_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">figsize</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="n">DEFAULT_FIGURE_SIZE</span><span class="p">,</span>
+        <span class="n">pretraining_ssl</span><span class="p">:</span> <span class="n">PretrainingSSL</span> <span class="o">=</span> <span class="n">PretrainingSSL</span><span class="o">.</span><span class="n">BEATS</span><span class="p">,</span>
+        <span class="n">model_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">off_topic_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;lad&quot;</span><span class="p">,</span>
+        <span class="n">off_topic_params</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">near_duplicate_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;embedding_distance&quot;</span><span class="p">,</span>
+        <span class="n">near_duplicate_params</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">label_error_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;intra_extra_distance&quot;</span><span class="p">,</span>
+        <span class="n">label_error_params</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">issues_to_detect</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">random_seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;cuda&quot;</span><span class="p">,</span>
+        <span class="c1"># Optional lightweight dataset adaptation (LoRA + SimCLR)</span>
+        <span class="n">lora_enable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">lora_r</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="n">lora_alpha</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="n">lora_dropout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+        <span class="n">adapt_epochs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">adapt_lr</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">,</span>
+        <span class="n">adapt_weight_decay</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="n">adapt_temperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+        <span class="n">adapt_projection_dim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">256</span><span class="p">,</span>
+        <span class="n">adapt_max_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">adapt_objective</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;infonce&quot;</span><span class="p">,</span>
+        <span class="n">vicreg_sim_coeff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">25.0</span><span class="p">,</span>
+        <span class="n">vicreg_var_coeff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">25.0</span><span class="p">,</span>
+        <span class="n">vicreg_cov_coeff</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="c1"># Augmentation controls</span>
+        <span class="n">adapt_sample_rate</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">adapt_strong_aug</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">adapt_time_shift_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="n">adapt_add_noise_snr_db</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">15.0</span><span class="p">,</span>
+        <span class="n">adapt_tempo_min</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>
+        <span class="n">adapt_tempo_max</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">,</span>
+        <span class="n">adapt_pitch_semitones</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
+        <span class="n">adapt_reverb_prob</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
+        <span class="n">adapt_eq_prob</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span>
+        <span class="n">adapt_time_mask_prob</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">adapt_time_mask_max_ratio</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+        <span class="c1"># Gradient accumulation for memory efficiency</span>
+        <span class="n">gradient_accumulation_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize SelfCleanAudio with model and cleaning parameters.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            distance_function_path (str): Module path for distance function.</span>
+<span class="sd">            distance_function_name (str): Distance function name.</span>
+<span class="sd">            chunk_size (int): Size of chunks to process.</span>
+<span class="sd">            precision_type_distance (type): Precision for distance calculation.</span>
+<span class="sd">            memmap (bool): Use memory-mapped arrays for embeddings.</span>
+<span class="sd">            memmap_path (Path|str|None): Path for memmap storage.</span>
+<span class="sd">            plot_distribution (bool): Whether to plot distance distribution.</span>
+<span class="sd">            plot_top_N (int|None): Top N to plot.</span>
+<span class="sd">            output_path (str|None): Path for outputs.</span>
+<span class="sd">            figsize (tuple): Figure size for plots.</span>
+<span class="sd">            pretraining_ssl (PretrainingSSL): SSL pretraining model enum.</span>
+<span class="sd">            model_path (str|None): Path to pretrained SSL model. If None, will</span>
+<span class="sd">                try environment variable ``SELFCLEAN_AUDIO_MODEL_PATH``.</span>
+<span class="sd">            off_topic_method (str): Off-topic detection method (&quot;lad&quot;, &quot;quantile&quot;, &quot;isolation_forest&quot;, &quot;cleanlab&quot;).</span>
+<span class="sd">            off_topic_params (dict|None): Parameters for the off-topic detection method.</span>
+<span class="sd">            near_duplicate_method (str): Near duplicate detection method (&quot;embedding_distance&quot;, &quot;cleanlab&quot;, &quot;dejavu&quot;).</span>
+<span class="sd">            near_duplicate_params (dict|None): Parameters for the near duplicate detection method.</span>
+<span class="sd">            label_error_method (str): Label error detection method (&quot;intra_extra_distance&quot;, &quot;cleanlab&quot;).</span>
+<span class="sd">            label_error_params (dict|None): Parameters for the label error detection method.</span>
+<span class="sd">            random_seed (int): Random seed for reproducibility.</span>
+<span class="sd">            device (torch.device|str): Device for model inference.</span>
+<span class="sd">            **kwargs: Additional arguments.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Accept both enum and string for pretraining_ssl for robustness in configs/tests</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pretraining_ssl</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="c1"># Try to match by enum value first (e.g., &quot;beats&quot;), then by name (case-insensitive)</span>
+            <span class="n">matched</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">PretrainingSSL</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span>
+                    <span class="n">pretraining_ssl</span> <span class="o">==</span> <span class="n">e</span><span class="o">.</span><span class="n">value</span>
+                    <span class="ow">or</span> <span class="n">pretraining_ssl</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="p">):</span>
+                    <span class="n">matched</span> <span class="o">=</span> <span class="n">e</span>
+                    <span class="k">break</span>
+            <span class="k">if</span> <span class="n">matched</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Unknown pretraining_ssl &#39;</span><span class="si">{</span><span class="n">pretraining_ssl</span><span class="si">}</span><span class="s2">&#39;. Must be one of: &quot;</span>
+                    <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">)&quot;</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">PretrainingSSL</span><span class="p">])</span>
+                <span class="p">)</span>
+            <span class="n">pretraining_ssl</span> <span class="o">=</span> <span class="n">matched</span>
+        <span class="c1"># Defer heavy SelfClean imports to runtime to keep module import light</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.cleaner.selfclean_cleaner</span><span class="w"> </span><span class="kn">import</span> <span class="n">SelfCleanCleaner</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.core.src.pkg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Embedder</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.core.src.utils.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">fix_random_seeds</span>
+
+        <span class="n">fix_random_seeds</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="n">random_seed</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">memmap</span> <span class="o">=</span> <span class="n">memmap</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">memmap_path</span> <span class="o">=</span> <span class="n">memmap_path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span> <span class="o">=</span> <span class="n">SelfCleanCleaner</span><span class="p">(</span>
+            <span class="n">distance_function_path</span><span class="o">=</span><span class="n">distance_function_path</span><span class="p">,</span>
+            <span class="n">distance_function_name</span><span class="o">=</span><span class="n">distance_function_name</span><span class="p">,</span>
+            <span class="n">chunk_size</span><span class="o">=</span><span class="n">chunk_size</span><span class="p">,</span>
+            <span class="n">precision_type_distance</span><span class="o">=</span><span class="n">precision_type_distance</span><span class="p">,</span>
+            <span class="n">memmap</span><span class="o">=</span><span class="n">memmap</span><span class="p">,</span>
+            <span class="n">memmap_path</span><span class="o">=</span><span class="n">memmap_path</span><span class="p">,</span>
+            <span class="n">plot_distribution</span><span class="o">=</span><span class="n">plot_distribution</span><span class="p">,</span>
+            <span class="n">plot_top_N</span><span class="o">=</span><span class="n">plot_top_N</span><span class="p">,</span>
+            <span class="n">output_path</span><span class="o">=</span><span class="n">output_path</span><span class="p">,</span>
+            <span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="c1"># Preserve requested methods/params for logging and downstream inspection.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">near_duplicate_method</span> <span class="o">=</span> <span class="n">near_duplicate_method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">near_duplicate_params</span> <span class="o">=</span> <span class="n">near_duplicate_params</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">off_topic_method</span> <span class="o">=</span> <span class="n">off_topic_method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">off_topic_params</span> <span class="o">=</span> <span class="n">off_topic_params</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">label_error_method</span> <span class="o">=</span> <span class="n">label_error_method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">label_error_params</span> <span class="o">=</span> <span class="n">label_error_params</span>
+        <span class="c1"># Require explicit model path - no fallbacks</span>
+        <span class="k">if</span> <span class="n">model_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;model_path must be explicitly provided in config. &quot;</span>
+                <span class="s2">&quot;Set `selfclean_audio.model_path` in the config template.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">Embedder</span><span class="o">.</span><span class="n">load_pretrained</span><span class="p">(</span>
+            <span class="n">ssl</span><span class="o">=</span><span class="n">pretraining_ssl</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">model_path</span><span class="o">=</span><span class="n">model_path</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">workdir</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;workdir&quot;</span><span class="p">,</span> <span class="s2">&quot;./outputs/&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">issues_to_detect</span> <span class="o">=</span> <span class="n">issues_to_detect</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lora_cfg</span> <span class="o">=</span> <span class="n">LoraAdaptConfig</span><span class="p">(</span>
+            <span class="n">enable</span><span class="o">=</span><span class="n">lora_enable</span><span class="p">,</span>
+            <span class="n">r</span><span class="o">=</span><span class="n">lora_r</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="n">lora_alpha</span><span class="p">,</span>
+            <span class="n">dropout</span><span class="o">=</span><span class="n">lora_dropout</span><span class="p">,</span>
+            <span class="n">epochs</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">adapt_epochs</span><span class="p">)</span> <span class="k">if</span> <span class="n">adapt_epochs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="n">lr</span><span class="o">=</span><span class="n">adapt_lr</span><span class="p">,</span>
+            <span class="n">weight_decay</span><span class="o">=</span><span class="n">adapt_weight_decay</span><span class="p">,</span>
+            <span class="n">temperature</span><span class="o">=</span><span class="n">adapt_temperature</span><span class="p">,</span>
+            <span class="n">projection_dim</span><span class="o">=</span><span class="n">adapt_projection_dim</span><span class="p">,</span>
+            <span class="n">max_steps</span><span class="o">=</span><span class="n">adapt_max_steps</span><span class="p">,</span>
+            <span class="n">objective</span><span class="o">=</span><span class="n">adapt_objective</span><span class="p">,</span>
+            <span class="n">vicreg_sim_coeff</span><span class="o">=</span><span class="n">vicreg_sim_coeff</span><span class="p">,</span>
+            <span class="n">vicreg_var_coeff</span><span class="o">=</span><span class="n">vicreg_var_coeff</span><span class="p">,</span>
+            <span class="n">vicreg_cov_coeff</span><span class="o">=</span><span class="n">vicreg_cov_coeff</span><span class="p">,</span>
+            <span class="n">sample_rate</span><span class="o">=</span><span class="p">(</span><span class="n">adapt_sample_rate</span> <span class="k">if</span> <span class="n">adapt_sample_rate</span> <span class="k">else</span> <span class="mi">16000</span><span class="p">),</span>
+            <span class="n">strong_aug</span><span class="o">=</span><span class="n">adapt_strong_aug</span><span class="p">,</span>
+            <span class="n">time_shift_max</span><span class="o">=</span><span class="n">adapt_time_shift_max</span><span class="p">,</span>
+            <span class="n">add_noise_snr_db</span><span class="o">=</span><span class="n">adapt_add_noise_snr_db</span><span class="p">,</span>
+            <span class="n">tempo_min</span><span class="o">=</span><span class="n">adapt_tempo_min</span><span class="p">,</span>
+            <span class="n">tempo_max</span><span class="o">=</span><span class="n">adapt_tempo_max</span><span class="p">,</span>
+            <span class="n">pitch_semitones</span><span class="o">=</span><span class="n">adapt_pitch_semitones</span><span class="p">,</span>
+            <span class="n">reverb_prob</span><span class="o">=</span><span class="n">adapt_reverb_prob</span><span class="p">,</span>
+            <span class="n">eq_prob</span><span class="o">=</span><span class="n">adapt_eq_prob</span><span class="p">,</span>
+            <span class="n">time_mask_prob</span><span class="o">=</span><span class="n">adapt_time_mask_prob</span><span class="p">,</span>
+            <span class="n">time_mask_max_ratio</span><span class="o">=</span><span class="n">adapt_time_mask_max_ratio</span><span class="p">,</span>
+            <span class="n">gradient_accumulation_steps</span><span class="o">=</span><span class="n">gradient_accumulation_steps</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="SelfCleanAudio.run_on_dataloader">
+<a class="viewcode-back" href="../../_api/selfclean_audio.selfclean_audio.html#selfclean_audio.selfclean_audio.SelfCleanAudio.run_on_dataloader">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">run_on_dataloader</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span>
+        <span class="n">issues_to_detect</span><span class="p">:</span> <span class="nb">list</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">apply_l2_norm</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Detect issues in dataset by running the cleaner on a dataloader.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            dataloader (DataLoader): PyTorch DataLoader with audio data.</span>
+<span class="sd">            issues_to_detect (list[IssueTypes]|None): Issues to detect.</span>
+<span class="sd">            apply_l2_norm (bool): Whether to L2 normalize embeddings.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            np.ndarray: Predicted issues mask or results.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Local import to avoid module import side-effects when not used</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.cleaner.issue_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">IssueTypes</span>
+
+        <span class="k">if</span> <span class="n">issues_to_detect</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Use instance variable if set, otherwise default to all issues</span>
+            <span class="n">issues_to_detect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">issues_to_detect</span> <span class="ow">or</span> <span class="p">[</span>
+                <span class="n">IssueTypes</span><span class="o">.</span><span class="n">NEAR_DUPLICATES</span><span class="p">,</span>
+                <span class="n">IssueTypes</span><span class="o">.</span><span class="n">OFF_TOPIC_SAMPLES</span><span class="p">,</span>
+                <span class="n">IssueTypes</span><span class="o">.</span><span class="n">LABEL_ERRORS</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">issues_to_detect</span> <span class="o">=</span> <span class="n">issues_to_detect</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run</span><span class="p">(</span>
+            <span class="n">dataloader</span><span class="o">=</span><span class="n">dataloader</span><span class="p">,</span>
+            <span class="n">apply_l2_norm</span><span class="o">=</span><span class="n">apply_l2_norm</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">calculate_scores</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">issue_manager</span><span class="p">,</span> <span class="n">noisy_labels</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># Local import to keep top-level import light</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.cleaner.issue_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">IssueTypes</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.core.src.utils.plotting</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+            <span class="n">calculate_scores_from_ranking</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Calculating Scores for Issues&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">issues_to_detect</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;No issues to detect specified&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">issue_manager</span>
+
+        <span class="k">for</span> <span class="n">issue_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">issues_to_detect</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Calculating </span><span class="si">{</span><span class="n">issue_type</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2"> Errors&quot;</span>
+            <span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">dataset</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="s2">&quot;get_errors&quot;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Cannot calculate scores without dataset.get_errors() providing ground truth&quot;</span>
+                <span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">issue_type</span> <span class="o">==</span> <span class="n">IssueTypes</span><span class="o">.</span><span class="n">NEAR_DUPLICATES</span><span class="p">:</span>
+                <span class="c1"># Handle near duplicates with pair comparison</span>
+                <span class="n">pred_duplicate_pairs</span> <span class="o">=</span> <span class="n">issue_manager</span><span class="o">.</span><span class="n">issue_dict</span><span class="p">[</span><span class="n">issue_type</span><span class="o">.</span><span class="n">value</span><span class="p">][</span>
+                    <span class="s2">&quot;indices&quot;</span>
+                <span class="p">]</span>
+
+                <span class="c1"># Use get_errors method to get ground truth duplicate pairs</span>
+                <span class="n">true_duplicate_pairs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_errors</span><span class="p">()</span>
+
+                <span class="c1"># Create ranking based on whether predicted pairs are true duplicates</span>
+                <span class="n">ranking_target</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="mi">1</span> <span class="k">if</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="ow">in</span> <span class="n">true_duplicate_pairs</span> <span class="k">else</span> <span class="mi">0</span>
+                    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pred_duplicate_pairs</span>
+                <span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Handle off-topic samples and label errors with simple index comparison</span>
+                <span class="n">pred_indices</span> <span class="o">=</span> <span class="n">issue_manager</span><span class="o">.</span><span class="n">issue_dict</span><span class="p">[</span><span class="n">issue_type</span><span class="o">.</span><span class="n">value</span><span class="p">][</span><span class="s2">&quot;indices&quot;</span><span class="p">]</span>
+
+                <span class="n">error_indicators</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_errors</span><span class="p">()</span>
+                <span class="n">true_issues</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">is_error</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">error_indicators</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_error</span>
+                <span class="p">}</span>
+
+                <span class="n">ranking_target</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="mi">1</span> <span class="k">if</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">true_issues</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">pred_indices</span>
+                <span class="p">]</span>
+
+            <span class="c1"># Calculate scores using the correct ground truth ranking</span>
+            <span class="n">scores</span> <span class="o">=</span> <span class="n">calculate_scores_from_ranking</span><span class="p">(</span><span class="n">ranking_target</span><span class="p">,</span> <span class="n">show_plots</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">issue_manager</span><span class="o">.</span><span class="n">issue_dict</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Scores-</span><span class="si">{</span><span class="n">issue_type</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+            <span class="c1"># Persist the full ranking vector for downstream visualizations</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c1"># Only write if we appear to be inside a run directory</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;workdir&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">workdir</span><span class="p">:</span>
+                    <span class="n">workdir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">workdir</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">workdir</span> <span class="o">/</span> <span class="s2">&quot;config.yaml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">or</span> <span class="p">(</span>
+                        <span class="n">workdir</span> <span class="o">/</span> <span class="s2">&quot;logger.txt&quot;</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+                        <span class="n">workdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                        <span class="n">out_path</span> <span class="o">=</span> <span class="n">workdir</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;Ranking-</span><span class="si">{</span><span class="n">issue_type</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+                        <span class="c1"># Save as a simple CSV with one column: target (1=TP at rank, 0=FP)</span>
+                        <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">ranking_target</span><span class="p">)})</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
+                            <span class="n">out_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span>
+                        <span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="c1"># Do not fail the run if persisting rankings is not possible</span>
+                <span class="k">pass</span>
+
+        <span class="k">return</span> <span class="n">issue_manager</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_run</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span>
+        <span class="n">apply_l2_norm</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Internal method to embed dataset and apply cleaning algorithm.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            dataloader (DataLoader): PyTorch DataLoader with audio data.</span>
+<span class="sd">            apply_l2_norm (bool): Whether to L2 normalize embeddings.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            np.ndarray: Predicted issues mask or results.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">is_fitted</span><span class="p">:</span>
+            <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataloader</span><span class="o">.</span><span class="n">dataset</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="p">(</span><span class="n">FolderAudioDataset</span><span class="p">,</span> <span class="n">NoisyDataset</span><span class="p">)):</span>
+                <span class="n">class_labels</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="n">dataset</span><span class="o">.</span><span class="n">idx_to_class</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">idx_to_class</span><span class="p">)</span>
+                <span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">class_labels</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lora_cfg</span><span class="o">.</span><span class="n">enable</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lora_cfg</span><span class="o">.</span><span class="n">epochs</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="s2">&quot;sample_rate&quot;</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Dataset </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> must define sample_rate attribute when LoRA adaptation is enabled&quot;</span>
+                    <span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sample_rate</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Dataset sample_rate must be a positive integer, got </span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">sample_rate</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_lora_cfg</span><span class="o">.</span><span class="n">sample_rate</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">sample_rate</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">adapt_model_with_lora</span><span class="p">(</span>
+                    <span class="n">model</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span>
+                    <span class="n">dataloader</span><span class="o">=</span><span class="n">dataloader</span><span class="p">,</span>
+                    <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span>
+                    <span class="n">cfg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_lora_cfg</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="n">emb_space</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">noisy_labels</span> <span class="o">=</span> <span class="n">embed_dataset</span><span class="p">(</span>
+                <span class="n">dataloader</span><span class="o">=</span><span class="n">dataloader</span><span class="p">,</span>
+                <span class="n">model</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span>
+                <span class="n">normalize</span><span class="o">=</span><span class="n">apply_l2_norm</span><span class="p">,</span>
+                <span class="n">memmap</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">memmap</span><span class="p">,</span>
+                <span class="n">memmap_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">memmap_path</span><span class="p">,</span>
+                <span class="n">tqdm_desc</span><span class="o">=</span><span class="s2">&quot;Creating dataset representation&quot;</span><span class="p">,</span>
+                <span class="n">device</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">,</span>
+                <span class="n">workdir</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">workdir</span><span class="p">,</span>
+                <span class="n">save_plots</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="n">emb_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">emb_space</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+                <span class="n">emb_space</span><span class="o">=</span><span class="n">emb_space</span><span class="p">,</span>
+                <span class="n">labels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">labels</span><span class="p">),</span>
+                <span class="n">paths</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">paths</span><span class="p">),</span>
+                <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span>
+                <span class="n">class_labels</span><span class="o">=</span><span class="n">class_labels</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="c1"># Ensure issues_to_detect is not None</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">SelfClean.selfclean.cleaner.issue_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">IssueTypes</span>
+
+            <span class="n">issues_to_detect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">issues_to_detect</span> <span class="ow">or</span> <span class="p">[</span>
+                <span class="n">IssueTypes</span><span class="o">.</span><span class="n">NEAR_DUPLICATES</span><span class="p">,</span>
+                <span class="n">IssueTypes</span><span class="o">.</span><span class="n">OFF_TOPIC_SAMPLES</span><span class="p">,</span>
+                <span class="n">IssueTypes</span><span class="o">.</span><span class="n">LABEL_ERRORS</span><span class="p">,</span>
+            <span class="p">]</span>
+            <span class="n">issue_manager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cleaner</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">issues_to_detect</span><span class="o">=</span><span class="n">issues_to_detect</span><span class="p">)</span>
+            <span class="n">issue_manager</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_scores</span><span class="p">(</span>
+                <span class="n">issue_manager</span><span class="o">=</span><span class="n">issue_manager</span><span class="p">,</span>
+                <span class="n">noisy_labels</span><span class="o">=</span><span class="n">noisy_labels</span><span class="p">,</span>
+                <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="c1"># Cleanup any temporary resources (e.g., synthetic duplicate files)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="s2">&quot;cleanup_temp_dir&quot;</span><span class="p">):</span>
+                    <span class="n">dataset</span><span class="o">.</span><span class="n">cleanup_temp_dir</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+            <span class="k">return</span> <span class="n">issue_manager</span></div>
+
+
+
+<div class="viewcode-block" id="extract_temporal_stats_batch">
+<a class="viewcode-back" href="../../_api/selfclean_audio.selfclean_audio.html#selfclean_audio.selfclean_audio.extract_temporal_stats_batch">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_temporal_stats_batch</span><span class="p">(</span><span class="n">embeddings</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extracts statistical features from a [N, T, D] tensor of audio embeddings.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        embeddings (torch.Tensor): shape [N, T, D]</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        torch.Tensor: shape [N, 8], each row is the feature vector for one sample.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Input must be shape [N, T, D]&quot;</span>
+    <span class="n">N</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">D</span> <span class="o">=</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">shape</span>
+
+    <span class="c1"># Frame-wise L2 norm: [N, T]</span>
+    <span class="n">frame_norms</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">embeddings</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Temporal deltas: [N, T-1, D]</span>
+    <span class="n">deltas</span> <span class="o">=</span> <span class="n">embeddings</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">embeddings</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="n">frame_deltas</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">deltas</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N, T-1]</span>
+
+    <span class="c1"># Temporal mean and var over features: [N, D]</span>
+    <span class="n">mean_over_time</span> <span class="o">=</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N, D]</span>
+    <span class="n">var_over_time</span> <span class="o">=</span> <span class="n">embeddings</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N, D]</span>
+
+    <span class="c1"># Aggregate stats</span>
+    <span class="n">mean_norm</span> <span class="o">=</span> <span class="n">frame_norms</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+    <span class="n">std_norm</span> <span class="o">=</span> <span class="n">frame_norms</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+
+    <span class="n">mean_delta</span> <span class="o">=</span> <span class="n">frame_deltas</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+    <span class="n">std_delta</span> <span class="o">=</span> <span class="n">frame_deltas</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+
+    <span class="n">mean_feat_mean</span> <span class="o">=</span> <span class="n">mean_over_time</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+    <span class="n">mean_feat_std</span> <span class="o">=</span> <span class="n">mean_over_time</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+
+    <span class="n">var_feat_mean</span> <span class="o">=</span> <span class="n">var_over_time</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+    <span class="n">var_feat_std</span> <span class="o">=</span> <span class="n">var_over_time</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># [N]</span>
+
+    <span class="c1"># Stack all features into [N, 8]</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">mean_norm</span><span class="p">,</span>
+            <span class="n">std_norm</span><span class="p">,</span>
+            <span class="n">mean_delta</span><span class="p">,</span>
+            <span class="n">std_delta</span><span class="p">,</span>
+            <span class="n">mean_feat_mean</span><span class="p">,</span>
+            <span class="n">mean_feat_std</span><span class="p">,</span>
+            <span class="n">var_feat_mean</span><span class="p">,</span>
+            <span class="n">var_feat_std</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">features</span>  <span class="c1"># shape: [N, 8]</span></div>
+
+
+
+<div class="viewcode-block" id="embed_dataset">
+<a class="viewcode-back" href="../../_api/selfclean_audio.selfclean_audio.html#selfclean_audio.selfclean_audio.embed_dataset">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">embed_dataset</span><span class="p">(</span>
+    <span class="n">dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
+    <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">memmap</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">memmap_path</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">tqdm_desc</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;cpu&quot;</span><span class="p">,</span>
+    <span class="n">workdir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;./outputs&quot;</span><span class="p">,</span>
+    <span class="n">save_plots</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ARR_TYPE</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute embeddings for all samples in a dataloader using a model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dataloader (DataLoader): Dataset loader.</span>
+<span class="sd">        model (nn.Module): Pretrained model for embeddings.</span>
+<span class="sd">        normalize (bool): Normalize embeddings if True.</span>
+<span class="sd">        memmap (bool): Use memory-mapped storage.</span>
+<span class="sd">        memmap_path (Path|str|None): Path for memory map.</span>
+<span class="sd">        tqdm_desc (str|None): Description for progress bar.</span>
+<span class="sd">        device (torch.device|str): Device for computation.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: (embedding array, array of file paths, tensor of labels, tensor of noisy_labels)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dataloader</span><span class="o">.</span><span class="n">dataset</span><span class="p">,</span> <span class="n">Sized</span><span class="p">):</span>
+        <span class="n">dataset_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataloader</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;The dataset does not have attribute __len__&quot;</span><span class="p">)</span>
+        <span class="n">dataset_len</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">noisy_labels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">temporal_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">save_plots</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="n">_</span><span class="p">,</span> <span class="n">emb_dim</span> <span class="o">=</span> <span class="n">_infer_shapes</span><span class="p">(</span><span class="n">dataloader</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span>
+
+    <span class="n">emb_space</span> <span class="o">=</span> <span class="n">_initialize_storage</span><span class="p">(</span>
+        <span class="n">memmap</span><span class="o">=</span><span class="n">memmap</span><span class="p">,</span>
+        <span class="n">memmap_path</span><span class="o">=</span><span class="n">memmap_path</span><span class="p">,</span>
+        <span class="n">dataset_len</span><span class="o">=</span><span class="n">dataset_len</span><span class="p">,</span>
+        <span class="n">emb_dim</span><span class="o">=</span><span class="n">emb_dim</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Ensure workdir exists for saving plots</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">workdir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="n">iterator</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span>
+        <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataloader</span><span class="p">),</span>
+        <span class="n">total</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">dataloader</span><span class="p">),</span>
+        <span class="n">desc</span><span class="o">=</span><span class="n">tqdm_desc</span><span class="p">,</span>
+        <span class="n">position</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">leave</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">write_ptr</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">batch_tup</span> <span class="ow">in</span> <span class="n">iterator</span><span class="p">:</span>
+            <span class="n">batch</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">noisy_label</span> <span class="o">=</span> <span class="n">batch_tup</span>
+
+            <span class="n">emb_batch</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">emb_batch_temporal</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">save_plots</span> <span class="k">else</span> <span class="kc">None</span>
+            <span class="k">for</span> <span class="n">waveform</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">:</span>
+                <span class="n">emb</span><span class="p">,</span> <span class="n">emb_t</span> <span class="o">=</span> <span class="n">_compute_embedding</span><span class="p">(</span>
+                    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+                    <span class="n">batch</span><span class="o">=</span><span class="n">waveform</span><span class="p">,</span>
+                    <span class="n">normalize</span><span class="o">=</span><span class="n">normalize</span><span class="p">,</span>
+                    <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">emb_batch</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">emb</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">save_plots</span> <span class="ow">and</span> <span class="n">emb_batch_temporal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">emb_batch_temporal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">emb_t</span><span class="p">)</span>
+
+            <span class="n">emb_batch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">emb_batch</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="c1"># Append temporal embeddings only when the accumulator exists</span>
+            <span class="k">if</span> <span class="n">temporal_list</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">emb_batch_temporal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="c1"># Keep per-sample temporal embeddings as [T, D]</span>
+                <span class="k">for</span> <span class="n">emb_t</span> <span class="ow">in</span> <span class="n">emb_batch_temporal</span><span class="p">:</span>
+                    <span class="n">temporal_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">emb_t</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">())</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">emb_batch</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">emb_np</span> <span class="o">=</span> <span class="n">emb_batch</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+            <span class="n">emb_space</span><span class="p">[</span><span class="n">write_ptr</span> <span class="p">:</span> <span class="n">write_ptr</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">emb_np</span>
+            <span class="n">write_ptr</span> <span class="o">+=</span> <span class="n">n</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">emb_space</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">memmap</span><span class="p">):</span>
+                <span class="n">emb_space</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+            <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">cpu</span><span class="p">())</span>
+            <span class="n">noisy_labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">noisy_label</span><span class="o">.</span><span class="n">cpu</span><span class="p">())</span>
+
+            <span class="n">paths</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
+    <span class="n">noisy_labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">noisy_labels</span><span class="p">)</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">save_plots</span><span class="p">:</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.manifold</span><span class="w"> </span><span class="kn">import</span> <span class="n">TSNE</span>
+
+        <span class="c1"># Column names for the 8 stats</span>
+        <span class="n">feature_names</span> <span class="o">=</span> <span class="n">TEMPORAL_FEATURE_NAMES</span>
+
+        <span class="n">emb_temporal</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">temporal_list</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">temporal_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">emb_temporal</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">temporal_list</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">emb_temporal</span> <span class="o">=</span> <span class="n">extract_temporal_stats_batch</span><span class="p">(</span><span class="n">emb_temporal</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="n">emb_temporal</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">emb_temporal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Create DataFrame</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">emb_temporal</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">feature_names</span><span class="p">)</span>
+            <span class="n">df</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;clean&quot;</span> <span class="k">if</span> <span class="n">lbl</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;noisy&quot;</span> <span class="k">for</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">noisy_labels</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+        <span class="n">bins</span> <span class="o">=</span> <span class="n">DEFAULT_HISTOGRAM_BINS</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="n">DEFAULT_HISTOGRAM_ALPHA</span>
+
+        <span class="k">if</span> <span class="n">df</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">feat</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">feature_names</span><span class="p">):</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span>
+                    <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;clean&quot;</span><span class="p">][</span><span class="n">feat</span><span class="p">],</span>
+                    <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;clean&quot;</span><span class="p">,</span>
+                    <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;density&quot;</span><span class="p">,</span>
+                    <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span>
+                    <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;noisy&quot;</span><span class="p">][</span><span class="n">feat</span><span class="p">],</span>
+                    <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;noisy&quot;</span><span class="p">,</span>
+                    <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;density&quot;</span><span class="p">,</span>
+                    <span class="n">kde</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                    <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+                <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+            <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
+                <span class="s2">&quot;Histograms of Temporal Stats (Clean vs Noisy)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span>
+            <span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">workdir</span><span class="p">,</span> <span class="s2">&quot;Figure1.png&quot;</span><span class="p">))</span>
+
+        <span class="c1"># TSNE plot</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">emb_space</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">perplexity</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
+                <span class="nb">min</span><span class="p">(</span>
+                    <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">emb_space</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">DEFAULT_TSNE_PERPLEXITY_MIN</span><span class="p">),</span>
+                    <span class="n">DEFAULT_TSNE_PERPLEXITY_MAX</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">X_embedded</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">perplexity</span><span class="o">=</span><span class="n">perplexity</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span>
+                <span class="n">emb_space</span>
+            <span class="p">)</span>
+
+            <span class="n">x_embed</span> <span class="o">=</span> <span class="n">X_embedded</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">y_embed</span> <span class="o">=</span> <span class="n">X_embedded</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+            <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+            <span class="n">scatter</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_embed</span><span class="p">,</span> <span class="n">y_embed</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">noisy_labels</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Class Label&quot;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;t-SNE of Embeddings&quot;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;TSNE-1&quot;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;TSNE-2&quot;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">workdir</span><span class="p">,</span> <span class="s2">&quot;Figure2.png&quot;</span><span class="p">))</span>
+
+    <span class="n">paths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">emb_space</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">noisy_labels</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_infer_shapes</span><span class="p">(</span>
+    <span class="n">dataloader</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">,</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
+    <span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Infer sample and embedding dimensions from a sample batch.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dataloader (DataLoader): Dataset loader.</span>
+<span class="sd">        model (nn.Module): Model to generate embeddings.</span>
+<span class="sd">        device (torch.device|str): Device for computation.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: (sample batch tensor, embedding dimension)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">sample_batch</span> <span class="o">=</span> <span class="n">dataloader</span><span class="o">.</span><span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># [C, T] Mono=1</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">sample_batch</span> <span class="o">=</span> <span class="n">sample_batch</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">emb</span> <span class="o">=</span> <span class="n">sample_batch</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">emb</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">sample_batch</span><span class="p">)</span>  <span class="c1"># type:ignore</span>
+
+    <span class="n">emb_dim</span> <span class="o">=</span> <span class="n">emb</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># [Seq_len, Embed_dim]</span>
+
+    <span class="k">return</span> <span class="n">sample_batch</span><span class="p">,</span> <span class="n">emb_dim</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_initialize_storage</span><span class="p">(</span><span class="n">memmap</span><span class="p">,</span> <span class="n">memmap_path</span><span class="p">,</span> <span class="n">dataset_len</span><span class="p">,</span> <span class="n">emb_dim</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initialize numpy array or memmap to store embeddings.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        memmap (bool): Use memmap if True.</span>
+<span class="sd">        memmap_path (Path): Path to store memmap.</span>
+<span class="sd">        dataset_len (int): Number of dataset samples.</span>
+<span class="sd">        emb_dim (int): Embedding dimension.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray or np.memmap: Storage for embeddings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">memmap</span><span class="p">:</span>
+        <span class="n">memmap_path</span> <span class="o">=</span> <span class="n">create_memmap_path</span><span class="p">(</span><span class="n">memmap_path</span><span class="p">)</span>
+        <span class="n">emb_space</span> <span class="o">=</span> <span class="n">create_memmap</span><span class="p">(</span>
+            <span class="n">memmap_path</span><span class="p">,</span> <span class="s2">&quot;embedding_space.dat&quot;</span><span class="p">,</span> <span class="n">dataset_len</span><span class="p">,</span> <span class="n">emb_dim</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">emb_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dataset_len</span><span class="p">,</span> <span class="n">emb_dim</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">emb_space</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_compute_embedding</span><span class="p">(</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span>
+    <span class="n">batch</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span>
+    <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute embedding for a single batch with optional normalization.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model (nn.Module): Model to extract features.</span>
+<span class="sd">        batch (Tensor): Input batch tensor.</span>
+<span class="sd">        normalize (bool): Apply L2 normalization if True.</span>
+<span class="sd">        device (torch.device|str): Device for computation.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: (main_embedding, temporal_embedding) where main_embedding is used</span>
+<span class="sd">               for cleaning and temporal_embedding contains temporal features.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">batch</span> <span class="o">=</span> <span class="n">batch</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">emb</span><span class="p">,</span> <span class="n">emb_t</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>  <span class="c1"># type:ignore</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># If no model provided, use the batch itself as embedding</span>
+        <span class="n">emb</span> <span class="o">=</span> <span class="n">batch</span>
+        <span class="n">emb_t</span> <span class="o">=</span> <span class="n">batch</span>
+
+    <span class="k">if</span> <span class="n">normalize</span><span class="p">:</span>
+        <span class="n">emb</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">emb</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">emb</span><span class="p">,</span> <span class="n">emb_t</span>
+
+
+<div class="viewcode-block" id="create_memmap">
+<a class="viewcode-back" href="../../_api/selfclean_audio.selfclean_audio.html#selfclean_audio.selfclean_audio.create_memmap">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_memmap</span><span class="p">(</span><span class="n">memmap_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">memmap_file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">len_dataset</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">*</span><span class="n">dims</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a memory-mapped numpy array for storing embeddings.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        memmap_path (Path): Directory to store memmap file.</span>
+<span class="sd">        memmap_file_name (str): Filename for memmap.</span>
+<span class="sd">        len_dataset (int): Number of samples.</span>
+<span class="sd">        *dims: Dimensions of each embedding.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.memmap: Memory-mapped numpy array.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">memmap_file</span> <span class="o">=</span> <span class="n">memmap_path</span> <span class="o">/</span> <span class="n">memmap_file_name</span>
+    <span class="k">if</span> <span class="n">memmap_file</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="n">memmap_file</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+    <span class="n">memmap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">memmap</span><span class="p">(</span>
+        <span class="nb">str</span><span class="p">(</span><span class="n">memmap_file</span><span class="p">),</span>
+        <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w+&quot;</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">len_dataset</span><span class="p">,</span> <span class="o">*</span><span class="n">dims</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">memmap</span></div>
+
+
+
+<div class="viewcode-block" id="create_memmap_path">
+<a class="viewcode-back" href="../../_api/selfclean_audio.selfclean_audio.html#selfclean_audio.selfclean_audio.create_memmap_path">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_memmap_path</span><span class="p">(</span><span class="n">memmap_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Ensure memmap directory exists or create a temporary directory.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        memmap_path (str|Path|None): Desired memmap directory or None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Path: Path to memmap directory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">memmap_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">memmap_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">memmap_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">memmap_path</span><span class="p">)</span>
+        <span class="n">memmap_path</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">memmap_path</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
